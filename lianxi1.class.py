@@ -15,9 +15,11 @@ class Person():
         else:
             print('No person can finded')
 
-    def weight(self):
-        print(f'{self.name} weight is {weight_code} kg')
+    def weight(self, weiht_kg):
+        self.weiht_kg = weiht_kg
+        print(f'{self.name} weight is {self.weight_code} {self.weiht_kg}')
 
 
 heping = Person('heping')
 heping.level()
+heping.weight('kg')
