@@ -2,24 +2,26 @@
 # _*_ coding: utf-8 _*_
 
 class Person():
-
-    def __init__(self, name, weight_code = 80):
+    def __init__(self, name):
         self.name = name
-        self.weight_code = weight_code
 
-    def level(self):
+    def level(self, cert = 10):
+        self.cert = cert
         if self.name == 'heping':
-            print(f'{self.name} is HCIE-DC、CCIE-RS、RHCE、RHCSA')
+            print(f'{self.name} is HCIE-DC CCIE-RS RHCE RHCSA')
         elif self.name == 'zhangjian':
-            print(f'{self.name} is HCNP-Cloud、CCNP-RS')
+            print(f'{self.name} is HCNP-Cloud CCNP-RS')
         else:
-            print('No person can finded')
+            self.cert = 2
+            print(f'{self.name} has no any Certification')
 
-    def weight(self, weiht_kg):
-        self.weiht_kg = weiht_kg
-        print(f'{self.name} weight is {self.weight_code} {self.weiht_kg}')
-
+    def pet(self):
+        print(f'{self.name} working has {self.cert} years')
 
 heping = Person('heping')
 heping.level()
-heping.weight('kg')
+heping.pet()
+
+fengyaru =Person('fengyaru')
+fengyaru.level()
+fengyaru.pet()
